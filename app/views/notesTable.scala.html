@@ -1,0 +1,23 @@
+@(notes : List[Note])
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>All Notes</title>
+</head>
+<body>
+	<h1>All Notes</h1>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Date</th>
+		</tr>
+		@for(note <- notes){ 
+		<tr>
+		<td>@note.title</td>
+		<td>@note.date</td>
+		</tr>
+		}
+		</table>
+</body>
+</html>

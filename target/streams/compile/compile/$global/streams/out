@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0mE:\Programy\JavaWorkspace\playframework\n11-playjava\app\views\notesTable.scala.html:1:1: not found: type Note[0m
+[0m[[0m[31merror[0m] [0m[0m@(notes : List[Note])[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\Programy\JavaWorkspace\playframework\n11-playjava\app\views\notesTable.scala.html:1:16: not found: type Note[0m
+[0m[[0m[31merror[0m] [0m[0m@(notes : List[Note])[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\Programy\JavaWorkspace\playframework\n11-playjava\app\views\notesTable.scala.html:15:8: missing parameter type[0m
+[0m[[0m[31merror[0m] [0m[0m		@for(note <- notes){ [0m
+[0m[[0m[31merror[0m] [0m[0m		     ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\Programy\JavaWorkspace\playframework\n11-playjava\app\views\notesTable.scala.html:23:8: not found: type Note[0m
+[0m[[0m[31merror[0m] [0m[0m</html>[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
