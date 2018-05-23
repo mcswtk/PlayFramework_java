@@ -3,40 +3,46 @@ package controllers;
 import java.util.List;
 import java.util.UUID;
 
-import model.Note;
+import javax.inject.Inject;
+
+import models.Note;
+import play.data.*;
 import play.mvc.*;
 
-/**
- * This controller contains an action to handle HTTP requests to the
- * application's home page.
- */
+
 public class NoteController extends Controller {
 
-  /**
-   * An action that renders an HTML page with a welcome message. The configuration
-   * in the <code>routes</code> file means that this method will be called when
-   * the application receives a <code>GET</code> request with a path of
-   * <code>/</code>.
-   */
-
+  @Inject
+  FormFactory formFactory;
+  
   public Result index() {
-    return ok(index.render());
+    return ok(views.html.index.render());
   }
 
   public Result showAll() {
     List<Note> notes = Note.find.all();
-    return ok(notesTable.render(notes));
+    return ok(views.html.notesTable.render(notes));
   }
 
   public Result show(UUID id) {
-    return TODO;
+    Note note = Note.find.byId(id);
+    if(note==null)
+      return notFound("Note not found");
+    return ok(views.html.show.render(note));
   }
 
   public Result create() {
-    return TODO;
+    Form<Note> noteForm = formFactory.form(Note.class);
+    return ok(views.html.create.render(noteForm));
   }
 
   public Result save() {
-    return TODO;
+//    Form<Note> noteForm = formFactory.form(Note.class).bindFromRequest();
+    DynamicForm requestData = formFactory.form().bindFromRequest();
+    String title = requestData.get("title");
+    String comment = requestData.get("comment");
+    Note note = new Note(title, comment);
+    note.save();
+    return redirect(routes.NoteController.showAll());
   }
 }

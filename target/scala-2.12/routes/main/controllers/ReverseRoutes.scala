@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/Programy/JavaWorkspace/playframework/n11-playjava/conf/routes
-// @DATE:Tue May 22 21:52:19 CEST 2018
+// @SOURCE:C:/Users/Maciej/git/playframework/N10-PlayJava/conf/routes
+// @DATE:Wed May 23 23:24:57 CEST 2018
 
 import play.api.mvc.Call
 
@@ -8,41 +8,41 @@ import play.api.mvc.Call
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:6
+// @LINE:5
 package controllers {
 
-  // @LINE:6
+  // @LINE:5
   class ReverseNoteController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:7
+    // @LINE:6
     def showAll(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "notes/all")
     }
   
-    // @LINE:8
+    // @LINE:7
     def create(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "notes/create")
     }
   
-    // @LINE:9
+    // @LINE:8
     def save(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "notes/create")
     }
   
-    // @LINE:10
+    // @LINE:9
     def show(id:java.util.UUID): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "notes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[java.util.UUID]].unbind("id", id)))
     }
   
-    // @LINE:6
+    // @LINE:5
     def index(): Call = {
       
       Call("GET", _prefix)
@@ -50,14 +50,14 @@ package controllers {
   
   }
 
-  // @LINE:13
+  // @LINE:12
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:12
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

@@ -1,4 +1,4 @@
-name := """N11-PlayJava"""
+name := "N10-PlayJava"
 organization := "com.mcswtk"
 
 version := "1.0-SNAPSHOT"

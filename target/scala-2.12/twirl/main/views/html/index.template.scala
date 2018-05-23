@@ -32,14 +32,14 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 Seq[Any](format.raw/*1.1*/("""<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>GuestBook</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GuestBook</title>
 </head>
 <body>
-<a href="newNote">Create new note.</a>
-<br>
-<br>
-<a href="notes/all">View all notes.</a>
+	<a href="notes/create">Create new note.</a>
+	<br>
+	<br>
+	<a href="notes/all">View all notes.</a>
 </body>
 </html>"""))
       }
@@ -57,9 +57,9 @@ Seq[Any](format.raw/*1.1*/("""<html>
 
               /*
                   -- GENERATED --
-                  DATE: Tue May 22 21:37:13 CEST 2018
-                  SOURCE: E:/Programy/JavaWorkspace/playframework/n11-playjava/app/views/index.scala.html
-                  HASH: 81318f509860d334f1af67c3fb00bbe0e4e17a6c
+                  DATE: Wed May 23 23:24:57 CEST 2018
+                  SOURCE: C:/Users/Maciej/git/playframework/N10-PlayJava/app/views/index.scala.html
+                  HASH: e0ca7497773042dee580106c4514dd47a4e424f3
                   MATRIX: 1030->0
                   LINES: 33->1
                   -- GENERATED --

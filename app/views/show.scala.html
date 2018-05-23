@@ -1,0 +1,30 @@
+@(note:Note)
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='@routes.Assets.versioned("css/style.css")' rel="stylesheet" />
+<title>Note @note.getTitle </title>
+</head>
+<body>
+	<center>
+			<h1>Note: @note.getTitle</h1>
+			<table>
+				<tr>
+					<th>Id</th>
+					<th>Title</th>
+					<th>Date</th>
+					<th>Comment</th>
+				</tr>
+				<tr>
+					<td>@note.getId</td>
+					<td>@note.getTitle</td>
+					<td>@note.getDateSQL</td>
+					<td>@note.getComment</td>
+				</tr>
+			</table>
+					<hr>
+		<a href="../">Home</a>
+	</center>
+</body>
+</html>

@@ -35,22 +35,27 @@ Seq[Any](format.raw/*1.22*/("""
 """),format.raw/*3.1*/("""<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='"""),_display_(/*6.14*/routes/*6.20*/.Assets.versioned("css/style.css")),format.raw/*6.54*/("""' rel="stylesheet" />
 <title>All Notes</title>
 </head>
 <body>
-	<h1>All Notes</h1>
-	<table>
-		<tr>
-			<th>Title</th>
-			<th>Date</th>
-		</tr>
-		"""),_display_(/*15.4*/for(note <- notes) yield /*15.22*/{_display_(Seq[Any](format.raw/*15.23*/(""" 
-		"""),format.raw/*16.3*/("""<tr>
-		<td>"""),_display_(/*17.8*/note/*17.12*/.title),format.raw/*17.18*/("""</td>
-		<td>"""),_display_(/*18.8*/note/*18.12*/.date),format.raw/*18.17*/("""</td>
-		</tr>
-		""")))}),format.raw/*20.4*/("""
-		"""),format.raw/*21.3*/("""</table>
+	<center>
+			<h1>All Notes</h1>
+			<table>
+				<tr>
+					<th>Id</th>
+					<th>Date</th>
+				</tr>
+				"""),_display_(/*17.6*/for(note <- notes) yield /*17.24*/{_display_(Seq[Any](format.raw/*17.25*/("""
+				"""),format.raw/*18.5*/("""<tr>
+					<td><a href=""""),_display_(/*19.20*/routes/*19.26*/.NoteController.show(note.getId)),format.raw/*19.58*/("""">"""),_display_(/*19.61*/note/*19.65*/.getId),format.raw/*19.71*/("""</a></td>
+					<td>"""),_display_(/*20.11*/note/*20.15*/.getDateSQL),format.raw/*20.26*/("""</td>
+				</tr>
+				""")))}),format.raw/*22.6*/("""
+			"""),format.raw/*23.4*/("""</table>
+					<hr>
+		<a href="../">Home</a>
+	</center>
 </body>
 </html>"""))
       }
@@ -68,11 +73,11 @@ Seq[Any](format.raw/*1.22*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue May 22 21:59:25 CEST 2018
-                  SOURCE: E:/Programy/JavaWorkspace/playframework/n11-playjava/app/views/notesTable.scala.html
-                  HASH: 47a66c768454e97808db3503fa0a9774f33fdd4c
-                  MATRIX: 957->1|1072->21|1102->25|1344->241|1378->259|1417->260|1449->265|1488->278|1501->282|1528->288|1568->302|1581->306|1607->311|1656->330|1687->334
-                  LINES: 28->1|33->1|35->3|47->15|47->15|47->15|48->16|49->17|49->17|49->17|50->18|50->18|50->18|52->20|53->21
+                  DATE: Wed May 23 23:24:57 CEST 2018
+                  SOURCE: C:/Users/Maciej/git/playframework/N10-PlayJava/app/views/notesTable.scala.html
+                  HASH: 366e87b96e1b1f6719b20dcbcc54d01218170e76
+                  MATRIX: 957->1|1072->21|1102->25|1226->123|1240->129|1294->163|1496->339|1530->357|1569->358|1602->364|1654->389|1669->395|1722->427|1752->430|1765->434|1792->440|1840->461|1853->465|1885->476|1938->499|1970->504
+                  LINES: 28->1|33->1|35->3|38->6|38->6|38->6|49->17|49->17|49->17|50->18|51->19|51->19|51->19|51->19|51->19|51->19|52->20|52->20|52->20|54->22|55->23
                   -- GENERATED --
               */
           

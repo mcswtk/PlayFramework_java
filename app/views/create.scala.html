@@ -1,0 +1,19 @@
+@(noteForm : Form[Note]) @import helper._
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Create new Note</title>
+<link href='@routes.Assets.versioned("css/style.css")' rel="stylesheet" />
+</head>
+<body>
+	<h1>Create new Note</h1>
+	@helper.form(action = routes.NoteController.save()){
+	@helper.inputText(noteForm("title"))
+	@helper.inputText(noteForm("comment"))
+
+	<input type="submit" value="Create Note"> }
+	<hr>
+	<a href="../">Home</a>
+</body>
+</html>

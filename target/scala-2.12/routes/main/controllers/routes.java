@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/Programy/JavaWorkspace/playframework/n11-playjava/conf/routes
-// @DATE:Tue May 22 21:52:19 CEST 2018
+// @SOURCE:C:/Users/Maciej/git/playframework/N10-PlayJava/conf/routes
+// @DATE:Wed May 23 23:24:57 CEST 2018
 
 package controllers;
 

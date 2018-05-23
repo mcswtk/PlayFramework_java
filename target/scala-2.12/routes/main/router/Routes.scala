@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/Programy/JavaWorkspace/playframework/n11-playjava/conf/routes
-// @DATE:Tue May 22 21:52:19 CEST 2018
+// @SOURCE:C:/Users/Maciej/git/playframework/N10-PlayJava/conf/routes
+// @DATE:Wed May 23 23:24:57 CEST 2018
 
 package router
 
@@ -14,18 +14,18 @@ import _root_.play.libs.F
 
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
-  // @LINE:6
+  // @LINE:5
   NoteController_1: controllers.NoteController,
-  // @LINE:13
+  // @LINE:12
   Assets_0: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
-    // @LINE:6
+    // @LINE:5
     NoteController_1: controllers.NoteController,
-    // @LINE:13
+    // @LINE:12
     Assets_0: controllers.Assets
   ) = this(errorHandler, NoteController_1, Assets_0, "/")
 
@@ -52,7 +52,7 @@ class Routes(
   }}
 
 
-  // @LINE:6
+  // @LINE:5
   private[this] lazy val controllers_NoteController_index0_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix)))
   )
@@ -65,12 +65,12 @@ class Routes(
       Nil,
       "GET",
       this.prefix + """""",
-      """ An example controller showing a sample home page""",
+      """""",
       Seq()
     )
   )
 
-  // @LINE:7
+  // @LINE:6
   private[this] lazy val controllers_NoteController_showAll1_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("notes/all")))
   )
@@ -88,7 +88,7 @@ class Routes(
     )
   )
 
-  // @LINE:8
+  // @LINE:7
   private[this] lazy val controllers_NoteController_create2_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("notes/create")))
   )
@@ -106,7 +106,7 @@ class Routes(
     )
   )
 
-  // @LINE:9
+  // @LINE:8
   private[this] lazy val controllers_NoteController_save3_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("notes/create")))
   )
@@ -124,7 +124,7 @@ class Routes(
     )
   )
 
-  // @LINE:10
+  // @LINE:9
   private[this] lazy val controllers_NoteController_show4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("notes/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -142,7 +142,7 @@ class Routes(
     )
   )
 
-  // @LINE:13
+  // @LINE:12
   private[this] lazy val controllers_Assets_versioned5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -163,37 +163,37 @@ class Routes(
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
-    // @LINE:6
+    // @LINE:5
     case controllers_NoteController_index0_route(params@_) =>
       call { 
         controllers_NoteController_index0_invoker.call(NoteController_1.index())
       }
   
-    // @LINE:7
+    // @LINE:6
     case controllers_NoteController_showAll1_route(params@_) =>
       call { 
         controllers_NoteController_showAll1_invoker.call(NoteController_1.showAll())
       }
   
-    // @LINE:8
+    // @LINE:7
     case controllers_NoteController_create2_route(params@_) =>
       call { 
         controllers_NoteController_create2_invoker.call(NoteController_1.create())
       }
   
-    // @LINE:9
+    // @LINE:8
     case controllers_NoteController_save3_route(params@_) =>
       call { 
         controllers_NoteController_save3_invoker.call(NoteController_1.save())
       }
   
-    // @LINE:10
+    // @LINE:9
     case controllers_NoteController_show4_route(params@_) =>
       call(params.fromPath[java.util.UUID]("id", None)) { (id) =>
         controllers_NoteController_show4_invoker.call(NoteController_1.show(id))
       }
   
-    // @LINE:13
+    // @LINE:12
     case controllers_Assets_versioned5_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
         controllers_Assets_versioned5_invoker.call(Assets_0.versioned(path, file))

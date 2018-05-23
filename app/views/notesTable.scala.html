@@ -3,21 +3,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='@routes.Assets.versioned("css/style.css")' rel="stylesheet" />
 <title>All Notes</title>
 </head>
 <body>
-	<h1>All Notes</h1>
-	<table>
-		<tr>
-			<th>Title</th>
-			<th>Date</th>
-		</tr>
-		@for(note <- notes){ 
-		<tr>
-		<td>@note.title</td>
-		<td>@note.date</td>
-		</tr>
-		}
-		</table>
+	<center>
+			<h1>All Notes</h1>
+			<table>
+				<tr>
+					<th>Id</th>
+					<th>Date</th>
+				</tr>
+				@for(note <- notes){
+				<tr>
+					<td><a href="@routes.NoteController.show(note.getId)">@note.getId</a></td>
+					<td>@note.getDateSQL</td>
+				</tr>
+				}
+			</table>
+					<hr>
+		<a href="../">Home</a>
+	</center>
 </body>
 </html>
